@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da janela */
+    background-color: white;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.title-container h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+.selection-container {
+    display: none; /* Esconde a seleção inicialmente */
+    flex-direction: column; /* Alinha verticalmente */
+    align-items: center; /* Centraliza os itens */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s; /* Transição suave */
+}
+
+.selection-container.show {
+    display: flex; /* Torna visível quando a classe 'show' é adicionada */
+    opacity: 1; /* Efeito de fade in */
+}
+
+.scenarios-header {
+    font-size: 2em; /* Tamanho do texto "Cenários" */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+.button-container {
+    display: flex; /* Mantém os botões lado a lado */
+    justify-content: center; /* Centraliza os botões */
+    gap: 20px; /* Espaço entre os botões */
+}
+
+.glass {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column; /* Alinha o ícone e o texto verticalmente */
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    cursor: pointer; /* Adiciona um cursor pointer ao passar o mouse */
+}
+
+.glass:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.glass p {
+    margin: 10px 0 0 0; /* Margem do texto */
+    color: #000; /* Muda a cor do texto para preto */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7); /* Adiciona sombra ao texto para maior contraste */
+}
+
+main {
+    padding: 20px;
+    min-height: 100vh; /* Garante que a área do main ocupe a altura total */
+}
+
+.scenario-info {
+    display: none; /* Esconde as seções inicialmente */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s;
+}
+
+.scenario-info.visible {
+    display: block; /* Torna visível quando a classe 'visible' é adicionada */
+    opacity: 1; /* Efeito de fade in */
+}

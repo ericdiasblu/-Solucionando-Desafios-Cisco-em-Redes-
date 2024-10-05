@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solucionando Desafios Cisco em Redes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title-container">
+        <h1>Solucionando Desafios Cisco em Redes</h1>
+    </div>
+
+    <div class="selection-container" id="scenarioSelection">
+        <h2 class="scenarios-header">Cenários</h2> <!-- Título "Cenários" acima dos botões -->
+        <div class="button-container">
+            <div class="glass" data-text="Cenário 1" onclick="showScenario('residential')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24">
+                    <path d="M12 2l10 10h-3v10h-14v-10h-3z"/>
+                </svg>
+                <p>Residencial</p> <!-- Texto abaixo do ícone -->
+            </div>
+            <div class="glass" data-text="Cenário 2" onclick="showScenario('commercial')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24">
+                    <path d="M4 7V4h3V1h10v3h3v3H4zm0 4h16v12H4V11zM0 11h4v12H0V11zm20 0h4v12h-4V11z"/>
+                </svg>
+                
+                <p>Comercial</p> <!-- Texto abaixo do ícone -->
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="residential" class="scenario-info">
+            <h2>Informações do Cenário 1</h2>
+            <p>Aqui estão as informações do cenário residencial...</p>
+            <button onclick="goBack()">Voltar</button> <!-- Botão para voltar -->
+        </section>
+        <section id="commercial" class="scenario-info">
+            <h2>Informações do Cenário 2</h2>
+            <p>Aqui estão as informações do cenário comercial...</p>
+            <button onclick="goBack()">Voltar</button> <!-- Botão para voltar -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
